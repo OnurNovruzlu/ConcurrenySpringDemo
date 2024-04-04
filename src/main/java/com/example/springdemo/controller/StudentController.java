@@ -22,6 +22,7 @@ public class StudentController {
         return service.saveStudent(body);
     }
 
+    // CONCURRENT METHOD
     @GetMapping("/{id}")
     public ServiceResponse getStudentData(@PathVariable("id") int id) {
         return service.getStudentReportParallel(id);
